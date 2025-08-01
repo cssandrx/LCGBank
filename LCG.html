@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register</title>
+  <link rel="icon" type="image/png" href="icons/logo.png">
+  <link rel="stylesheet" href="sy.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <img height="50" src="icons/logo.png" alt="Profile" class="profile-pic">
+      <h2>Welcome to ATM</h2>
+    </nav>
+  </header>
+
+  <main class="register-section">
+    <div class="form-container">
+      <h2>Register</h2>
+      <form action="register" method="post" id="registerForm">
+        <input type="text" name="name" placeholder="Full Name" required><br>
+
+      <div class="gender">
+        <span class="gender-label">
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        </span>
+  
+        <span class="gender-label">
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+        </span>
+      </div>
+
+        <input type="email" name="email" placeholder="Email" required><br>
+        <input type="tel" name="contact" id="contact" placeholder="Contact Number" 
+        required pattern="[0-9]{10}" title="Please enter a 10-digit contact number."><br>
+        <input type="password" name="password" placeholder="PIN (4–8 digits)" 
+        required inputmode="numeric" pattern="\d{4,8}" title="Enter 4 to 8 digit PIN"/><br>      <div class="to-login-container">
+        <button type="submit" id="toLogin">Register</button><br>
+      </div>
+      </form>
+      <p>Already have an account? <a href="login.html">Login here</a></p>
+    </div>
+  </main>
+  <footer class="site-footer">
+  <div class="footer-content">
+    <p>&copy; 2025 ATM Banking System</p>
+    <ul class="footer-links">
+      <li><a href="#">Privacy Policy</a></li>
+      <li><a href="#">Terms of Service</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+  </div>
+</footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

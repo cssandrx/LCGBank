@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LCG Bank</title>
+  <link rel="icon" type="image/png" href="icons/logo.png">
+  <link rel="stylesheet" href="sy.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <img height="50" src="icons/logo.png" alt="Profile" class="profile-pic">
+      <h2>Welcome to ATM</h2>
+    </nav>
+  </header>
+
+  <main class="register-section">
+    <div class="form-container">
+  <img src="icons/logo.png" alt="Transaction" class="transaction-icon">
+  <h2>Send Money 💵</h2>
+   <div id="successMessage" class="success-alert" role="alert" style="display:none;">
+  ✅ Transfer successful!
+    </div>
+  <form action="#" method="post" id="transactionForm" action="BankingServlet">
+    <input type="text" name="recipient" placeholder="Recipient Account Number" required 
+    pattern="\d{10,18}" title="Enter 10–18 digit account number"><br>
+
+    <input type="number" name="amount" placeholder="Amount (₱)" required min="1" step="0.01" 
+    title="Enter a positive amount"><br>
+
+    <textarea name="description" placeholder="Description (optional)" rows="2" maxlength="100"></textarea><br>
+<div class="to-login-container">
+    <input type="hidden" class="toLogin"  id="confirmTransaction" value="transaction">
+  <button type="submit">Submit Transfer</button>
+</div>
+</form>
+   
+  </form>
+    </div>
+  </main>
+  <footer class="site-footer">
+  <div class="footer-content">
+    <p>&copy; 2025 ATM Banking System</p>
+    <ul class="footer-links">
+      <li><a href="#">Privacy Policy</a></li>
+      <li><a href="#">Terms of Service</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+  </div>
+</footer>
+  <script src="app.js"></script>
+</body>
+</html>

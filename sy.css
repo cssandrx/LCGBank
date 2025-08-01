@@ -1,0 +1,255 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+    background-image: url('icons/blu.png'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.navbar {
+    background-color: #1f6d92;
+    color: white;
+    padding: px 20px;
+    font-size: 24px;
+    font-family: 'Helvetica', cursive;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    border-bottom: 1px solid;
+    margin-bottom: 70px; 
+}
+
+.navbar h2 {
+    font-size: 40px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-family: 'Comic Sans MS', cursive;
+    margin: 0;
+}
+
+
+.register-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    width: 300px;
+    text-align: center;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+button[type="submit"], 
+input[input="number"]{
+    width: 100%; /* Ensure all inputs and button take full width */
+    padding: 10px;
+    margin-top: 12px; /* Consistent margin for spacing */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+a {
+    color: purple;
+    text-decoration: underline;
+}
+
+.header {
+    background-color: #2f6cb9;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    border-bottom: 3px solid #000; 
+}
+
+.profile-pic {
+    height: 100px; 
+    width: auto;
+}
+
+.gender {
+  display: flex;
+  align-items: center;
+  gap: 5rem; 
+  justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 12px;
+}
+
+.gender-label {
+  display: flex;
+  align-items: center;
+  gap: 4px; 
+}
+
+
+
+.site-footer {
+  background-color: #024a73;
+  color: #fff;
+  text-align: center;
+  padding: 15px 10px;
+  margin-top: 70px; 
+}
+
+.site-footer .footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.site-footer .footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.site-footer .footer-links a {
+  color: #b3d4f5;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.site-footer .footer-links a:hover {
+  text-decoration: underline;
+}
+
+.to-login-container {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+#toLogin {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover & focus states for interactivity */
+#toLogin:hover {
+  background-color: #218838;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#toLogin:focus {
+  outline: 2px solid #02561b;
+  outline-offset: 2px;
+}
+
+#confirmTransaction {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+#confirmTransaction:hover {
+  background-color: #218838;
+}
+
+.header-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.form-container input,
+.form-container textarea {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.375rem;
+  box-sizing: border-box;
+  margin-bottom: 0.75rem;
+}
+
+.form-container textarea {
+  resize: vertical;
+  min-height: 3rem;
+}
+
+.header-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem; 
+  margin-bottom: 1rem; 
+}
+
+.transaction-icon {
+  width: 100px;
+  height: auto;
+  margin-bottom: 0; 
+}
+
+.header-row img {
+  vertical-align: middle;
+}
+
+.success-alert {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  padding: 0.75rem 1rem;
+  border-radius: 0.375rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+#confirmTransaction,
+button[type="submit"] {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+button[type="submit"]:hover,
+#confirmTransaction:hover {
+  background-color: #218838;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+button[type="submit"]:focus,
+#confirmTransaction:focus {
+  outline: 2px solid #02561b;
+  outline-offset: 2px;
+}

@@ -1,0 +1,45 @@
+import java.io.*;
+import jakarta.servlet.*;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.*;
+
+@WebServlet("/BankingServlet")
+public class BankingServlet extends HttpServlet {
+
+  @Override
+  protected void doPost(HttpServletRequest req, HttpServletResponse res)
+      throws ServletException, IOException {
+    String formType = req.getParameter("formType");
+    res.setContentType("text/html;charset=UTF-8");
+    PrintWriter out = res.getWriter();
+
+    if ("register".equals(formType)) {
+      String name = req.getParameter("name");
+      String gender = req.getParameter("gender");
+      String email = req.getParameter("email");
+      String contact = req.getParameter("contact");
+      String pin = req.getParameter("password"); 
+
+
+      out.println("<html><body>");
+      out.println("<h2>Registration Successful</h2>");
+      out.println("<p>Welcome, " + name + "!</p>");
+      out.println("<a href='login.html'>Proceed to Login</a>");
+      out.println("</body></html>");
+
+    } else if ("transaction".equals(formType)) {
+      String recipient = req.getParameter("recipient");
+      String amount = req.getParameter("amount");
+      String desc = req.getParameter("description");
+
+      // TODO: Validate & process transfer with JDBC transaction :contentReference[oaicite:3]{index=3}
+
+      out.println("<html><body>");
+      out.println("<h2>Transfer Successful!</h2>");
+      out.printf("<p>₱%.2f transferred to %s.</p>",
+                 Double.parseDouble(amount), recipient);
+      out.printf("<p>Description: %s</p>", desc == null ? "" : desc);
+      out.println("</body></html>");
+    }
+  }
+}
